@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{EDDB810B-A7B9-20B0-45B8-9B60789F16DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -64,15 +63,15 @@
     <Compile Include="Assets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Scripts\MinecraftCopy\Data\CubeData.cs" />
     <Compile Include="Assets\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\MinecraftCopy\Data\CubeData.cs" />
-    <Compile Include="Assets\Scripts\MinecraftCopy\Generate.cs" />
     <Compile Include="Assets\Scripts\MinecraftCopy\Gen\GenerateMesh.cs" />
+    <Compile Include="Assets\Scripts\MinecraftCopy\Generate.cs" />
+    <Compile Include="Assets\Scripts\MinecraftCopy\Data\ChunkData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\license.txt" />
-    <None Include="Assets\Progress.md" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

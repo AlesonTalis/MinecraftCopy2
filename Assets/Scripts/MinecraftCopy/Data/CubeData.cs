@@ -108,6 +108,13 @@ namespace MinecraftCopy.Data
             }
         };
 
+        public static readonly Vector3Int[] faceDirections = new Vector3Int[]
+        {
+            new Vector3Int(0,1,0), new Vector3Int(0,-1,0),// top bottom
+            new Vector3Int(0,0,1), new Vector3Int(0,0,-1),// front back
+            new Vector3Int(1,0,0), new Vector3Int(-1,0,0),// right left
+        };
+
         public (Vector3[] vertices, int[] triangles, Vector2[] uv) GetMeshData()
         {
             List<Vector3> vertices = new List<Vector3>();
@@ -136,6 +143,26 @@ namespace MinecraftCopy.Data
             }
 
             return (vertices.ToArray(), triangles.ToArray(), uv.ToArray());
+        }
+
+        public (List<Vector3> vertices, List<int> triangles, Vector2[] uv) GetCubeFace(int faceDir, Vector3 pos, int tIndex = 0)
+        {
+            List<Vector3> vertices = new List<Vector3>(faces[faceDir].vertices);
+            //vertices.ForEach(v => v += pos);
+            for (int i = 0; i < vertices.Count; i++)
+            {
+                vertices[i] *= 0.5f;
+                vertices[i] += pos;
+            }
+
+            List<int> triangles = new List<int>(faces[faceDir].triangles);
+            //triangles.ForEach(t => t += tIndex);
+            for (int i = 0; i < triangles.Count; i++)
+            {
+                triangles[i] += tIndex;
+            }
+
+            return (vertices, triangles, null);
         }
     }
 }

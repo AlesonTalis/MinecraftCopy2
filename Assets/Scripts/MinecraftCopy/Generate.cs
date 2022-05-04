@@ -14,5 +14,10 @@ namespace MinecraftCopy
         {
             meshFilter.mesh = GenerateMesh.GenerateSingleCube(new Data.CubeData());
         }
+
+        public void GenerateSingleChunk()
+        {
+            meshFilter.mesh = GenerateMesh.GenerateSingleChunk(new Data.ChunkData(Vector3Int.zero))[2];
+        }
     }
 }

@@ -14,6 +14,9 @@ namespace MinecraftCopy.Editor
 
             // generate single cube
             if (GUILayout.Button("Generate Single Cube")) t.GenerateSingleCube();
+
+            // generate single chunk
+            if (GUILayout.Button("Generate Single Chunk")) t.GenerateSingleChunk();
         }
     }
 }
